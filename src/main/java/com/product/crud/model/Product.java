@@ -1,23 +1,20 @@
 package com.product.crud.model;
 
-import jakarta.persistence.Entity;
-import jakarta.persistence.GeneratedValue;
-import jakarta.persistence.GenerationType;
-import jakarta.persistence.Table;
+import jakarta.persistence.*;
 
 @Entity(name="product")
 @Table(name = "product")
 
 public class Product {
 
-    @id
+    @Id
     @GeneratedValue(strategy =  GenerationType.AUTO)
     private Integer id;
     private String name;
-    private Long prince;
+    private Long price;
 
     public Long getPrince() {
-        return prince;
+        return price;
     }
     public Integer getId() {
         return id;
@@ -31,8 +28,7 @@ public class Product {
     public void setId(Integer id) {
         this.id = id;
     }
-
-    public void setPrince(Long prince) {
-        this.prince = prince;
+    public void setPrice(Long price) {
+        this.price = price;
     }
 }
