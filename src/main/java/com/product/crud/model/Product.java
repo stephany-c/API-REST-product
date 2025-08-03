@@ -13,7 +13,7 @@ public class Product {
     private String name;
     private Long price;
 
-    public Long getPrince() {
+    public Long getPrice() {
         return price;
     }
     public Integer getId() {
